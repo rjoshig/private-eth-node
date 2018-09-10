@@ -1,0 +1,1 @@
+/home/rjoshi/.ethereum/privatechain/scripts/initGenesisChain.sh

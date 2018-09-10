@@ -1,0 +1,5 @@
+
+Ctrl + SDhift + L   : Select All occurances
+Shit + Alt plus drag or arrow == multiple lines at the same time type
+
+"web3": "^1.0.0-beta.35"
