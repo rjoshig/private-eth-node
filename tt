@@ -1,0 +1,122 @@
+
+
+# ============================================================================
+#  ls / file listing aliases
+# ============================================================================
+
+# Basic ls with color and group directories first
+alias ls='ls --color=auto --group-directories-first'
+
+# Your requested: ll = long listing, sorted by time (newest at the bottom)
+alias ll='ls -ltrh --color=auto'
+
+# Common variations
+alias la='ls -A'                    # almost all (show hidden except . and ..)
+alias l='ls -CF'                    # classified (append indicator to entries)
+alias lla='ls -lah'                 # long + all hidden + human-readable sizes
+alias lt='ls -lth'                  # long, sorted by time (newest first)
+alias ltr='ls -ltrh'                # long, reverse time (oldest first)
+alias lsize='ls -lSh'               # long, sorted by size (largest first)
+
+
+# ============================================================================
+# Navigation & shell basics
+# ============================================================================
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ~='cd ~'
+alias -- -='cd -'                   # go back to previous directory
+alias c='clear'
+
+
+# ============================================================================
+# Colored & improved utils (assuming you installed bat, fd, ripgrep, htop)
+# ============================================================================
+alias bat='batcat'
+export BAT_THEME="Dracula"   # or whichever you like
+# Use bat instead of cat (syntax highlighting) — fallback to cat if not installed
+if command -v bat &> /dev/null || command -v batcat &> /dev/null; then
+    alias cat='bat --style=plain --paging=never'
+else
+    alias cat='cat'
+fi
+
+# fd instead of find (much faster)
+if command -v fd &> /dev/null; then
+    alias find='fd'
+fi
+
+# ripgrep instead of grep (faster, better defaults)
+if command -v rg &> /dev/null; then
+    alias grep='rg'
+    alias egrep='rg'
+    alias fgrep='rg'
+fi
+
+# Better top
+alias top='htop'                    # if htop is installed, otherwise falls back
+
+
+# ============================================================================
+# Git shortcuts (many overlap with oh-my-zsh git plugin — keep only what you like)
+# ============================================================================
+
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git commit -v'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gpl='git pull'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gl='git log --oneline --decorate --graph'
+alias gla='git log --oneline --decorate --graph --all'
+
+
+# ============================================================================
+# Python / dev quick commands
+# ============================================================================
+
+alias py='python3'
+alias pip='pip3'
+alias venv='python3 -m venv .venv && source .venv/bin/activate'
+alias act='source .venv/bin/activate 2>/dev/null || echo "No .venv found"'
+alias deact='deactivate'
+alias jup='jupyter lab'             # or change to 'jupyter notebook'
+alias pyt='pytest'
+
+
+# ============================================================================
+# WSL / Ubuntu convenience
+# ============================================================================
+
+alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
+alias ports='ss -tuln'              # modern replacement for netstat
+alias exp='explorer.exe .'          # open current folder in Windows Explorer
+alias code='code .'                 # open VS Code here
+alias now='date +"%Y-%m-%d %H:%M:%S"'
+
+
+# ============================================================================
+# Safety / verbosity
+# ============================================================================
+
+alias mkdir='mkdir -pv'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+
+alias al="cat ~/.aliases"
+
+
+alias SB="cd ~/code/ && ls -ltar"
+alias AI="cd ~/code/ai && ls -ltar"
+alias FR="cd ~/code/fork && ls -ltar"
+alias TB="cd ~/code/hype-automate-trade &&  ls -latr"
+alias SP="cd ~/code/spark &&  ls -latr"
