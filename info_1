@@ -1,0 +1,118 @@
+First, the foundation: the identity graph
+
+Everything TruAudience sells sits on one thing — a single identity graph that acts as the backbone for an interoperable suite of identity-driven marketing products, using AI to cluster identifiers into individuals and households and then score how confident it is in each match. 
+GlobeNewswire
+
+Plain terms: a giant map that says "this email, this phone number, this home address, this streaming device and this cookie are all the same person — and here's how sure we are."
+
+Everything below is either feeding that map, using it, or measuring results through it.
+
+
+The 5 product pillars
+
+TransUnion organises TruAudience into Marketing Identity, Marketing Audiences, Marketing Analytics, Consumer & Marketing Insights, and Credit-Informed Marketing. 
+TransUnion
+
+1. Marketing Identity — "clean up my customer data"
+
+The products here include Identity Resolution, Identity Appends, Attribute Appends, Graph Extracts and ID Translation. 
+TransUnion
+
+Identity Resolution
+Deduplicates and unifies customer records by resolving identities across channels and devices to a single individual or household.
+Plain terms: You have "Rob Smith," "Robert Smith" and "R. Smith" in three systems. This tells you they're one person.
+Example: A bank's CRM has 12M records but only 8M real people. You've been emailing the same person 3 times and counting them 3 times in reporting. 
+GlobeNewswire
+
+Identity Appends
+Updates and integrates new, valid customer contact information to expand reach and improve connectivity.
+Plain terms: Fills in the blanks. You have an email, it gives you the current address and phone.
+Example: Customer moved house 2 years ago and you never knew. Now your direct mail actually arrives. 
+TransUnion
+
+Attribute Appends
+Enriches records with demographic data to improve audience insights, segmentation and targeting.
+Plain terms: Adds descriptive facts to each person — age, income band, homeowner, has kids, life events.
+Example: You learn 40% of your best customers just had a baby. That changes your creative. 
+TransUnion
+
+Graph Extracts
+Lets a client build and maintain their own first-party identity graph, powering everything from media monetisation to prospecting.
+Plain terms: Instead of using TransUnion's map through their tools, you get a copy of the relevant slice to run inside your own systems. 
+TransUnion
+
+ID Translation
+Plain terms: Converts one platform's ID into another's. Your CRM ID → the ID that The Trade Desk or a CTV platform understands, so you can actually target that person.
+
+2. Marketing Audiences — "who do I talk to"
+
+Audience building & segmentation — create and segment high-quality customer and prospect audiences.
+Plain terms: Turning your data into a targetable list. "Lapsed customers, aged 30–45, homeowners, in-market for a car." 
+TransUnion
+
+Data onboarding — part of the end-to-end line alongside identity, insights, targeting and measurement.
+Plain terms: Taking your offline customer list and safely getting it into digital ad platforms so you can advertise to those exact people. 
+TransUnion
+
+Lookalike / modelled audiences — The TruAudience Platform is a rapid audience creation and management system using multi-key matching and machine learning to onboard first-party data and model audiences.
+Plain terms: "Find me 5 million more people who look like my best 100,000 customers." 
+TransUnion
+
+Data Marketplace — formerly Tru Optik's Data Marketplace, letting partners use audience data on the supply side at scale.
+Plain terms: A shop where publishers and advertisers buy third-party audience segments (e.g. "luxury travellers") to layer onto campaigns. 
+TransUnion
+
+Data collaboration / clean rooms
+Plain terms: You and a retail partner want to compare customer lists without either side seeing the other's raw data. A clean room does the matching in the middle and only returns aggregate answers.
+
+3. Marketing Analytics — "did it work, and where should the money go"
+
+This is the pillar Gartner rates. TruAudience offers unified SaaS-based tools for MMM, attribution and experimentation, with scenario planning and KPI-specific visualisations. 
+TransUnion
+
+Marketing Mix Modelling (MMM)
+Plain terms: Top-down statistics. It looks at total spend per channel per week versus total sales, and separates out what marketing caused versus weather, price, competitors or the economy.
+Example: "Of £100M in sales, TV drove £12M, search drove £8M, and £60M would have happened anyway." Works without any personal data, which is why it's back in fashion.
+Technically it uses Bayesian inference, latent instrumental variables, recency weighting and time-varying coefficients — i.e. it accounts for the fact that a channel's effectiveness changes over time rather than assuming it's fixed. 
+TransUnion
+
+Multi-Touch Attribution (MTA)
+Plain terms: Bottom-up, person-level. It follows an individual's actual path — saw a CTV ad, clicked a search ad, bought — and splits credit across those touches.
+Example: "This customer's purchase gets 40% credit to CTV, 60% to search." Needs identity, which is where the graph earns its keep.
+
+Incrementality testing / experimentation
+Plain terms: A controlled experiment. Show ads to one group, hide them from a matched group, compare. The difference is the true lift.
+Example: You find your branded search ads generate almost nothing incremental — those people would have bought anyway.
+
+Scenario planning & optimisation
+Plain terms: "If I move £5M from TV to CTV, what happens to sales?" A simulator built on the model.
+
+Why all three matter: MMM is strategic but slow and broad; MTA is granular but breaks with cookie loss; experiments are truth but expensive. TransUnion's pitch is a balanced view across MMM, digital attribution and test-and-control experiments — use each to check the others. 
+TransUnion
+
+4. Consumer & Marketing Insights — "who are my customers, really"
+
+Combines the identity graph with proprietary segmentation methodology and nationwide scoring to describe demographics, geographics, attitudes and media preferences. 
+TransUnion
+
+Plain terms: Research and profiling rather than activation. Less "target these people," more "understand these people."
+Example: Analysing geo-demographic data alongside your first-party data to inform expansion planning, media planning and daypart strategy — e.g. deciding which three cities to open stores in next. 
+TransUnion
+
+5. Credit-Informed Marketing — the one nobody else has
+
+Improves campaign performance with credit-informed data targeting solutions. 
+TransUnion
+
+Plain terms: Using regulated credit-bureau signals to target people likely to qualify and convert — not just people who look interested.
+Example: A card issuer only mails prefiltered prospects who'd actually pass underwriting. Cuts wasted spend and declines dramatically.
+This is heavily regulated (in the US, FCRA rules around prescreen and permissible purpose) — which is precisely why competitors can't copy it.
+
+How it all connects
+
+The suite is designed as a loop:
+
+Identity cleans your data → Audiences turns it into targets → media runs → Analytics measures what worked → results feed back into who you target next. TruAudience connects your data, teams and marketing platforms with a single identity graph. 
+TransUnion
+
+That closed loop is the actual product. Buying just the MMM piece from TransUnion gets you a good-but-not-best-in-class model; buying the loop is where the value case sits.
