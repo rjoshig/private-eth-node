@@ -1,0 +1,149 @@
+# Path Forward & Outreach Plan
+## DeciNow ingestion baseline + DDM claim (Box A)
+
+**For:** your own use — how to run this without stepping on the politics
+**Companion files:** `DeciNow_Ingestion_Effort_Template.xlsx` (the instrument), `DeciNow_DDM_FactSheet.pptx` (the 4-slide output for Kylee)
+**Your role:** neutral analyst advising Kylee. No stake in the outcome. Report it exactly as it is.
+
+---
+
+## 1. The one principle that keeps you safe
+
+You are **not** deciding whether DDM saves 30%. You are **building the instrument that makes the claim checkable**, and reporting the current state honestly.
+
+Say this out loud, in these words, to everyone you talk to:
+
+> "I'm not here to decide whether DDM is worth it. Kylee asked me to establish the current effort baseline so any efficiency claim can be measured against something real. I need your help getting the baseline right."
+
+This does three things at once: it defuses the Sunil/Sridhar history (you're not on a side), it protects you (you never author the 30%), and it makes people willing to give you honest numbers (you're measuring the work, not judging them).
+
+**Repeat it whenever the conversation drifts toward "is DDM good."** Redirect to "what does the current work actually take."
+
+---
+
+## 2. Keep the two boxes physically separate
+
+| | Box A (this work) | Box B (later) |
+|---|---|---|
+| Question | AIP baseline vs DDM — current state | Robert/Erol DataOS-style design; TAP end state |
+| Nature | Measurable, near-term | Vision, fit, timelines |
+| People | Prashant, Sridhar, Sara/Shweta | Robert, Erol, Georgi |
+| Output | 4-slide fact sheet | Separate strategic brief |
+
+**Do not let Box B people into Box A conversations, or vice versa.** The moment the AIP-vs-DDM discussion becomes an architecture debate, you lose the number. If someone raises TAP or the DataOS design during a DDM conversation, note it and say: "That's part of a separate piece Kylee also asked for — let's keep this one on current ingestion effort."
+
+One insight to hold privately for Box B: **DDM optimises the very configuration layer that a DataOS-style platform might replace outright.** That tension belongs in the Box B brief, not in front of the DDM stakeholders.
+
+---
+
+## 3. The sequence — who you talk to, in what order
+
+Order matters because of the politics. Work from the neutral outside inward.
+
+### Step 1 — Kylee (align on scope and access)
+Before talking to anyone, confirm with Kylee:
+- The deliverable is the 4-slide fact sheet, current-state + claim analysis, **no recommendation** (recommendation lives in Box B).
+- She will **open the door** with Prashant and Sridhar if needed, so your outreach reads as "Kylee asked" not "you're auditing them."
+- Confirm timeline (≈1 week) and that both units — new-customer onboarding and rebuild — are in scope.
+
+**Ask her:** "Do you want me to talk to Sara's team about what DDM actually does, or keep this purely to the two engineers' effort estimates?" (You need the DDM scope confirmed by *someone*, and Sara's team is the honest source for it — see Step 2.)
+
+### Step 2 — Sara's team (DDM scope — facts, not opinions)
+Purpose: nail down **exactly what DDM does**, so your slide 2 scope statement is accurate and unarguable. This is a factual fact-find, not an effort estimate.
+
+Keep it neutral and technical. You're documenting capability, not evaluating it. (Questions in §5.)
+
+### Step 3 — Prashant and Sridhar (the baseline — separately)
+**This is the crux, and they must be interviewed independently.** Do not put them in the same room for this. Independent estimates are the entire method: agreement gives you a baseline, divergence gives you the finding.
+
+Give each of them the **same template**, the **same steps**, the **same two units**. Fill it with them live if you can (a 45-minute working session each), so you can probe the reasoning rather than just collecting numbers.
+
+### Step 4 — Back to Kylee (readout)
+Present the fact sheet. Walk the arithmetic. Name the denominator problem. Hand her the range, not a verdict.
+
+---
+
+## 4. How to handle the specific politics
+
+**Sunil ↔ Sridhar friction, Prashant aligned to Sunil.**
+- Do not reference the friction. Ever. Not to them, not in the deck.
+- Interview separately so neither is performing for the other.
+- Attribute nothing by name in the fact sheet. Use "the two estimators" / "the range." Named numbers become ammunition; ranges do not.
+- If one gives conspicuously self-serving numbers, you don't argue — the *independent* other estimate and the transparent arithmetic expose it on their own. Let the method do the work.
+
+**If Prashant says "30% is impossible" and Sridhar says "30% is real":**
+Both are probably answering different questions. Your slide 3 arithmetic is designed to surface exactly this. Your line: "You may both be right about different denominators — let's see what each of your own numbers implies."
+
+**If someone pushes you to endorse a side:**
+"My job is to give Kylee the facts as they are, not a verdict. The numbers will speak; I'm just making sure they're gathered the same way from both of you."
+
+---
+
+## 5. The questions to ask each group
+
+### For Sara's team (DDM scope — factual)
+1. Which AIP tabs / steps does the DDM form actually replace — all of them, or a subset?
+2. Does DDM change anything about the DeciNow ETL runtime, or purely the configuration authoring?
+3. What do the SQL stack-validation queries replace or automate — a step that was manual before?
+4. In the configuration process, where do you expect time to be saved — authoring, error-reduction, validation, or review?
+5. Does DDM reduce *rework* (fewer config errors reaching a run), and if so, how is that error caught today?
+6. Is there anything DDM makes *slower* or adds as a new step (form-filling, setup, learning curve)?
+7. Has DDM been run against any real source end-to-end yet, even once, in a test?
+
+### For Prashant and Sridhar (baseline — ask each, independently)
+Frame every question around **the work as it is today with the AIP**, for **one unit** at a time.
+
+**Establish the unit:**
+1. Walk me through onboarding one new customer, start to finish. What are the steps as *you* experience them?
+2. Now the same for a rebuild / modification — what's different?
+
+**Effort per step (fill the template):**
+3. For each of the seven config steps, how many hours does one unit typically take? Give me a realistic middle, not best or worst case.
+4. For the non-config steps, same — even though DDM won't change them, I need the whole picture to get the denominator right.
+5. Which step is the biggest time sink today? Which is the most error-prone?
+
+**Rework (this is where DDM's case often really lives):**
+6. How often does a config error force a re-run? How much time does that cost when it happens?
+7. What causes most of those errors — the SQL-like text, the mapping, the type-casting?
+
+**The DDM projection (per config step):**
+8. For each config step, do you expect DDM to make it faster, and by roughly how much? Why?
+9. When you (or others) say "30%", 30% of *what* — the config work, or the whole ingestion effort?
+10. What would have to be true for DDM to hit that number? What would stop it?
+
+**Neutrality probe (ask both, same way):**
+11. Where do you think DDM helps most? Where does it help least or not at all?
+
+> The pair of questions **9** ("30% of what") and **8** (per-step expectation) are the ones that resolve the whole dispute. Ask them of both people, identically.
+
+---
+
+## 6. How to run the estimate so it holds up
+
+- **Same instrument, same order, independently.** The template enforces this.
+- **Middle estimates, not extremes.** Ask for typical, then optionally a low–high range if they resist a single number.
+- **Hours, not percentages, as the input.** Let the sheet compute percentages. People anchor badly on percentages and well on "how long does this take me."
+- **Capture the *why* on DDM impact**, not just the rating. The one-line reason is what makes divergence interpretable later.
+- **Two units always.** The finding "DDM helps onboarding more than rebuilds" (or vice versa) is credible precisely because it's nuanced, not a single headline.
+
+---
+
+## 7. What the fact sheet will and won't say
+
+**Will:** current lifecycle and where effort concentrates; that DDM only touches configuration; the arithmetic any headline % must satisfy; each estimator's implied saving, as a range; the likely denominator confusion.
+
+**Won't:** declare 30% right or wrong; recommend adopting or rejecting DDM; touch the Robert/Erol design or TAP; name individuals against numbers.
+
+That restraint is the point. Kylee asked for facts she can present in 3–4 slides and expand later. The neutral, bounded version is more useful to her — and safer for you — than a verdict.
+
+---
+
+## 8. Immediate next actions
+
+1. Confirm scope + access with Kylee (Step 1 questions above).
+2. 30-minute factual session with Sara's team → finalise the slide-2 scope statement.
+3. Send Prashant and Sridhar the template ahead of separate 45-minute sessions; fill it live.
+4. Drop their numbers into the Comparison and Claim Analysis tabs; the arithmetic resolves itself.
+5. Update the fact sheet's slide 3 with the real range; present to Kylee.
+
+Everything after that — the DataOS-style design, TAP, the end-state vision — is Box B, and a separate document when you're ready.
